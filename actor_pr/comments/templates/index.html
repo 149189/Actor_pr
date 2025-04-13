@@ -1,0 +1,19 @@
+<form method="post">
+  {% csrf_token %}
+  <input
+    type="text"
+    name="actor_name"
+    placeholder="Enter actor's name"
+    required
+  />
+  <div>
+    <label>
+      <input type="radio" name="sentiment_choice" value="negative" checked />
+      Negative
+    </label>
+    <label>
+      <input type="radio" name="sentiment_choice" value="positive" /> Positive
+    </label>
+  </div>
+  <button type="submit">Generate Comments</button>
+</form>
